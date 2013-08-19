@@ -17,6 +17,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     persist.sys.root_access=3
 
+# selinux dialog
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
@@ -26,6 +27,7 @@ PRODUCT_PACKAGES += \
     BlueBalls \
     Camera \
     CarbonFibers \
+    Development \
     Focal \
     CMFileManager \
     Galaxy4 \
@@ -44,7 +46,11 @@ PRODUCT_PACKAGES += \
     Torch \
     Trebuchet \
     VoicePlus \
-    Wallpapers
+    Wallpapers \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf
+
 
 # prebuilts
 PRODUCT_PACKAGES += \
@@ -185,3 +191,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ro.romstats.url=http://carbon-stats.mattman.org \
 ro.romstats.name=CarbonRom- \
 ro.romstats.version=$(CARBON_VERSION)
+
+-include vendor/carbon/sepolicy/sepolicy.mk
